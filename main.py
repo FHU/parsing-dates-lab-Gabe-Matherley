@@ -4,23 +4,23 @@
 #YOU MAY USE THIS FUNCTION IF YOU WANT TO OR YOU MAY REMOVE IT
 def parse_month(month):
     if month == 'January':
-        return '1'
+        return '01'
     if month == 'February':
-        return '2'
+        return '02'
     if month == 'March':
-        return '3'
+        return '03'
     if month == 'April':
-        return '4'
+        return '04'
     if month == 'May':
-        return '5'
+        return '05'
     if month == 'June':
-        return '6'
+        return '06'
     if month == 'July':
-        return '7'
+        return '07'
     if month == 'August':
-        return '8'
+        return '08'
     if month == 'September':
-        return '9'
+        return '09'
     if month == 'October':
         return '10'
     if month == 'November':
@@ -32,8 +32,10 @@ def parse_month(month):
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
-    pass
+        user_string = user_string.replace(' ','/')
+        user_string = user_string.replace(',','')
+        return user_string
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
-    pass
+    print(parse_date(user_string))
