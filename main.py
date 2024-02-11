@@ -32,9 +32,11 @@ def parse_month(month):
 #parse_date function should return the date formated as MM/DD/YYYY
 #DO NOT REMOVE THIS FUNCTION
 def parse_date(user_string):
-        user_string = user_string.replace(' ','/')
-        user_string = user_string.replace(',','')
-        return user_string
+    sep_dates = user_string.split(' ')
+    month = parse_month(sep_dates[0])
+    day = sep_dates[1].replace(',','')
+    year = sep_dates[2]
+    return f"{month}/{day}/{year}"
 
 #REMOVE PASS AND YOUR CODE GOES HERE
 if __name__ == '__main__':
