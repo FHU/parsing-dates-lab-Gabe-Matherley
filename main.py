@@ -36,6 +36,8 @@ def parse_date(user_string):
     month = parse_month(sep_dates[0])
     day = sep_dates[1].replace(',','')
     year = sep_dates[2]
+    if len(day) == 1:
+        day = '0' + day
     return f"{month}/{day}/{year}"
 
 #REMOVE PASS AND YOUR CODE GOES HERE
